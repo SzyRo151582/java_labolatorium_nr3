@@ -1,5 +1,15 @@
 import java.util.Scanner;
 
+enum LiczbyEnum
+{
+    JEDEN, DWA, TRZY, CZTERY, PIEC, SZESC;
+}
+
+enum StatusEnum
+{
+    KONTYNUUJEMY, KONIEC;
+}
+
 public class Main {
 
     public static void main(String[] args) {
@@ -19,6 +29,40 @@ public class Main {
 
         /* statusy i wybór ze switch case to najczęstsze użycia enumów, enumy są często używane
         * w różnego rodzaju listach, selectach jako krótkie opcje wyboru np. jako status A, X (Aktualny, Usunięty) */
+
+        while (true)
+        {
+            Scanner scan = new Scanner(System.in);
+            System.out.println("Podaj dowolna wartosc liczbowa: ");
+            int liczba = scan.nextInt();
+            if (liczba == 0)
+            {
+                System.out.println("Status: " + StatusEnum.KONIEC);
+                break;
+            }
+
+            switch (liczba)
+            {
+                case 1: System.out.println("Twoja cyfra slownie to: " + LiczbyEnum.JEDEN);
+                    System.out.println("Status: " + StatusEnum.KONTYNUUJEMY);
+                    break;
+                case 2: System.out.println("Twoja cyfra slownie to: " + LiczbyEnum.DWA);
+                    System.out.println("Status: " + StatusEnum.KONTYNUUJEMY);
+                    break;
+                case 3: System.out.println("Twoja cyfra slownie to: " + LiczbyEnum.TRZY);
+                    System.out.println("Status: " + StatusEnum.KONTYNUUJEMY);
+                    break;
+                case 4: System.out.println("Twoja cyfra slownie to: " + LiczbyEnum.CZTERY);
+                    System.out.println("Status: " + StatusEnum.KONTYNUUJEMY);
+                    break;
+                case 5: System.out.println("Twoja cyfra slownie to: " + LiczbyEnum.PIEC);
+                    System.out.println("Status: " + StatusEnum.KONTYNUUJEMY);
+                    break;
+                case 6: System.out.println("Twoja cyfra slownie to: " + LiczbyEnum.SZESC);
+                    System.out.println("Status: " + StatusEnum.KONTYNUUJEMY);
+                    break;
+            }
+        }
 
     }
 }
