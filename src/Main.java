@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -13,6 +16,21 @@ public class Main {
             e) w klasie Main proszę stworzyć objekty podobnie jak w przykładzie 5,
             oraz stworzyć listę typu najbardziej generycznego np. List<Budynek>
          */
+
+        Samochod samochod = new Samochod("Peugeot", "508", 2, 80000);
+        System.out.println(samochod.toString());
+
+        SUV suv = new SUV("Peugeot", "3008", 2, 95000, 18);
+        System.out.println(suv.toString());
+
+        Crossover crossover = new Crossover("Peugeot", "2008", 2, 87500, 17, 5);
+        System.out.println(crossover.toString());
+
+        List<Samochod> listaSamochodow = new ArrayList<>();
+        listaSamochodow.add(samochod);
+        listaSamochodow.add(suv);
+        listaSamochodow.add(crossover);
+        System.out.println(listaSamochodow);
 
     }
 }
